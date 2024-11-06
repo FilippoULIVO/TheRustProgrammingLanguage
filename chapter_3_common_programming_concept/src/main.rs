@@ -1,7 +1,8 @@
 fn main() {
 
     shadowing();
-    mutable_constants()
+    mutable_constants();
+    tuples();
 }
 const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
 
@@ -55,4 +56,28 @@ fn data_types(){
     // remainder
     let remainder = 43 % 5; //i32
 }
+fn tuples(){
+    let tup = (500, 6.4, 1);
 
+    let (x, y, z) = tup;
+
+    println!("The value of y is: {y}");
+    let x: (i32, f64, u8) = (500, 6.4, 1);
+
+    let five_hundred = x.0;
+
+    let six_point_four = x.1;
+
+    let one = x.2;
+
+    println!("the value of five_hundred is: {five_hundred}");
+    let five_hundred = 499;
+    println!("the value of five_hundred is: {five_hundred}");
+    let x=(five_hundred,7.2,2);
+    let six_point_four = x.1;
+    println!("the value of six_point_four is: {six_point_four}");
+
+
+
+
+}
